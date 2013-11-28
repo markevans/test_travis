@@ -9,7 +9,7 @@ describe "deleting recursively" do
       FileUtils.rmdir dir unless dir == '.'
     end
     puts "*** RESULTS OF FIND: ***"
-    puts `find .`
+    puts `find . | grep -v '.git'`
     puts "************"
   end
 end
